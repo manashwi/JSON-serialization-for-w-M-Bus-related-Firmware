@@ -9,7 +9,7 @@ Buffer overflow protected
 Embedded-friendly and portable
 JSON format matches the required structure exactly
 
-#Why This Design?
+# Why This Design?
 1. Why C?
 C is widely used in embedded firmware
 Full control over memory
