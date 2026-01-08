@@ -3,7 +3,7 @@ The goal of this project was to design and implementat an embedded-friendly soft
 
 # Key Features
 Written in pure C
-No dynamic memory allocation
+/ No dynamic memory allocation
 No external JSON libraries
 Buffer overflow protected
 Embedded-friendly and portable
