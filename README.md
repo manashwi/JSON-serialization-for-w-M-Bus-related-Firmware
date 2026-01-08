@@ -5,26 +5,35 @@ The goal of this project was to design and implementat an embedded-friendly soft
 Written in pure C, No dynamic memory allocation, No external JSON libraries, Buffer overflow protected, Embedded-friendly and portable, JSON format matches the required structure exactly
 
 # Why This Design?
-1. Why C?
-  C is widely used in embedded firmware /
-  Full control over memory
-  Minimal runtime overhead
-  Works on microcontrollers and Linux targets
+1. Why C? <br/>
+  C is widely used in embedded firmware <br/>
+  Full control over memory <br/>
+  Minimal runtime overhead <br/>
+  Works on microcontrollers and Linux targets <br/>
   
-2. Why No JSON Library?
-  Embedded systems often have limited memory
-  JSON libraries increase binary size
-  Manual serialization ensures exact output format
-  No hidden heap usage
+2. Why No JSON Library? <br/>
+  Embedded systems often have limited memory <br/>
+  JSON libraries increase binary size <br/>
+  Manual serialization ensures exact output format <br/>
+  No hidden heap usage <br/>
 
-3. Why Fixed-Size Buffers?
-  Predictable memory usage
-  Avoids fragmentation
-  Safer than dynamic allocation in firmware
-  Easier to analyze and test
+3. Why Fixed-Size Buffers? <br/>
+  Predictable memory usage <br/>
+  Avoids fragmentation <br/>
+  Safer than dynamic allocation in firmware <br/>
+  Easier to analyze and test <br/>
 
-7. Why Manual Buffer Handling
-  Prevents buffer overflow
-  Every write checks remaining space
-  Errors are returned safely
-  Suitable for safety-critical systems
+7. Why Manual Buffer Handling <br/>
+  Prevents buffer overflow <br/>
+  Every write checks remaining space <br/>
+  Errors are returned safely <br/>
+  Suitable for safety-critical systems <br/>
+
+# Assumptions
+Maximum number of devices and data points is fixed at compile time <br/>
+Input strings are valid and null-terminated <br/>
+JSON format must not be modified
+
+# Conclusion
+This project demonstrates safe and efficient JSON serialization suitable for embedded systems. <br/>
+The design prioritizes clarity, reliability, and memory safety, making it suitable for real-world firmware applications.
