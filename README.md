@@ -2,16 +2,11 @@
 The goal of this project was to design and implementat an embedded-friendly software library that serializes structured meter data into a predefined JSON format
 
 # Key Features
-Written in pure C
-/ No dynamic memory allocation
-No external JSON libraries
-Buffer overflow protected
-Embedded-friendly and portable
-JSON format matches the required structure exactly
+Written in pure C, No dynamic memory allocation, No external JSON libraries, Buffer overflow protected, Embedded-friendly and portable, JSON format matches the required structure exactly
 
 # Why This Design?
 1. Why C?
-  C is widely used in embedded firmware
+  C is widely used in embedded firmware /
   Full control over memory
   Minimal runtime overhead
   Works on microcontrollers and Linux targets
