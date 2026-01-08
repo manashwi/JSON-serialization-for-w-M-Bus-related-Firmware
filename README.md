@@ -29,6 +29,40 @@ Written in pure C, No dynamic memory allocation, No external JSON libraries, Buf
   Errors are returned safely <br/>
   Suitable for safety-critical systems <br/>
 
+# How to Build and Run
+Using GCC <br/>
+gcc examples/demo.c src/json_serializer.c -Iinclude -o demo <br/>
+./demo
+
+# Example Output
+[ <br/>
+  { <br/>
+    "gateway_id":"GW001", <br/>
+    "date":"2024-01-01", <br/>
+    "device_type":"water", <br/>
+    "interval_minutes":60, <br/>
+    "total_readings":2, <br/>
+    "values":{ <br/>
+      "readings":[ <br/>
+        { <br/>
+          "media":"water", <br/>
+          "meter":"flow", <br/>
+          "device_id":"DEV001", <br/>
+          "unit":"m3", <br/>
+          "data":[ <br/>
+          { <br/>
+              "timestamp":"2024-01-01T00:00", <br/>
+              "meter_datetime":"2024-01-01T00:00", <br/>
+              "total_m3":12.345, <br/>
+              "status":"OK" <br/>
+            } <br/>
+          ] <br/>
+        } <br/>
+      ] <br/>
+    } <br/>
+  } <br/>
+] 
+
 # Assumptions
 Maximum number of devices and data points is fixed at compile time <br/>
 Input strings are valid and null-terminated <br/>
