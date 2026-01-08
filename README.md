@@ -11,25 +11,25 @@ JSON format matches the required structure exactly
 
 # Why This Design?
 1. Why C?
-C is widely used in embedded firmware
-Full control over memory
-Minimal runtime overhead
-Works on microcontrollers and Linux targets
+  C is widely used in embedded firmware
+  Full control over memory
+  Minimal runtime overhead
+  Works on microcontrollers and Linux targets
+  
+2. Why No JSON Library?
+  Embedded systems often have limited memory
+  JSON libraries increase binary size
+  Manual serialization ensures exact output format
+  No hidden heap usage
 
-3. Why No JSON Library?
-Embedded systems often have limited memory
-JSON libraries increase binary size
-Manual serialization ensures exact output format
-No hidden heap usage
-
-5. Why Fixed-Size Buffers?
-Predictable memory usage
-Avoids fragmentation
-Safer than dynamic allocation in firmware
-Easier to analyze and test
+3. Why Fixed-Size Buffers?
+  Predictable memory usage
+  Avoids fragmentation
+  Safer than dynamic allocation in firmware
+  Easier to analyze and test
 
 7. Why Manual Buffer Handling
-Prevents buffer overflow
-Every write checks remaining space
-Errors are returned safely
-Suitable for safety-critical systems
+  Prevents buffer overflow
+  Every write checks remaining space
+  Errors are returned safely
+  Suitable for safety-critical systems
